@@ -120,13 +120,22 @@ sections.forEach(section => {
 });
 
 
+// TOP 버튼
 const btnUp = document.querySelector('.btnUp');
 
+// btnUp.addEventListener('click', ()=>{
+//     document.querySelector('#s1').scrollIntoView({
+//         behavior: 'smooth'
+//     });
+// })
+
 btnUp.addEventListener('click', ()=>{
-    document.querySelector('#s1').scrollIntoView({
-        behavior: 'smooth'
+    gsap.to(window, {
+        scrollTo: 0,
+        duration: 1,
+        ease: "power2.inOut"
     });
-})
+});
 
 
 // gsap
